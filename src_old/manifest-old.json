@@ -1,0 +1,15 @@
+{
+  "name": "Slight",
+  "version": "0.11",
+  "description": "A plugin that makes Google minimal",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "manifest_version": 2
+}

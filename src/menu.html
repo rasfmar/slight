@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slight Menu</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+      html {
+        width: 300px;
+        height: 300px;
+      }
+
+      body {
+        background-color: #111;
+        margin-left: 2em;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+      }
+
+      h1 {
+        font-weight: 700;
+        font-size: 3em;
+      }
+
+      label {
+        font-size: 1.25em;
+      }
+
+      input, label {
+        vertical-align: middle;
+      }
+
+      input, button {
+        font-family: 'Montserrat', sans-serif;
+        filter: invert(1);
+      }
+
+      form {
+        line-height: 1.75;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>slight</h1>
+    <form id="form">
+      <input type="checkbox" id="darkmode" /> <label>dark mode</label> <br />
+      <input type="checkbox" id="suggestions" /> <label>show suggestions</label> <br />
+      <input type="checkbox" id="grid" /> <label>show grid</label> <br /><br />
+      <button id="save">save</button>
+    </form>
+    <script src="menu.js"></script>
+  </body>
+</html>

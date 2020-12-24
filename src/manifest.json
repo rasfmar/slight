@@ -1,0 +1,33 @@
+{
+  "name": "Slight",
+  "version": "1.0.0",
+  "description": "A plugin that makes Google minimal",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [ "background.js" ],
+    "persistent": true
+  },
+  "permissions": [ "storage", "tabs" ],
+  "content_scripts": [
+    {
+      "js": [ "style.js" ],
+      "matches": [ "*://www.google.com/*" ],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_popup": "menu.html",
+    "default_icon": {
+      "16": "images/slight_16.png",
+      "32": "images/slight_32.png",
+      "48": "images/slight_48.png",
+      "128": "images/slight_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/slight_16.png",
+    "32": "images/slight_32.png",
+    "48": "images/slight_48.png",
+    "128": "images/slight_128.png"
+  }
+}
