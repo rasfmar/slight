@@ -19,16 +19,6 @@ chrome.storage.sync.get(["GRID"], function (result) {
   document.getElementById("grid").checked = GRID;
 });
 
-function _toggle(name) {
-  if (name === "darkmode") {
-    DARK_MODE = document.getElementById(name).checked;
-  } else if (name === "suggestions") {
-    SUGGESTIONS = document.getElementById(name).checked;
-  } else if (name === "grid") {
-    GRID = document.getElementById(name).checked;
-  }
-}
-
 function _set() {
   chrome.storage.sync.set({
     "DARK_MODE": DARK_MODE,
@@ -43,7 +33,17 @@ function _set() {
   });
 }
 
+function _toggle(name) {
+  if (name === "darkmode") {
+    DARK_MODE = document.getElementById(name).checked;
+  } else if (name === "suggestions") {
+    SUGGESTIONS = document.getElementById(name).checked;
+  } else if (name === "grid") {
+    GRID = document.getElementById(name).checked;
+  }
+  _set();
+}
+
 document.getElementById("darkmode").onchange = () => _toggle("darkmode");
 document.getElementById("suggestions").onchange = () => _toggle("suggestions");
 document.getElementById("grid").onchange = () => _toggle("grid");
-document.getElementById("save").onclick = _set;
