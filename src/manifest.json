@@ -1,7 +1,7 @@
 {
   "name": "Slight",
   "version": "1.0.4",
-  "description": "A plugin that makes Google minimal",
+  "description": "A plugin for minimalists that customizes Google's search homepage to be minimal",
   "manifest_version": 2,
   "background": {
     "scripts": [ "background.js" ],
